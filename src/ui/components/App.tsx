@@ -28,6 +28,8 @@ if (module.hot) {
 
 const App = () => {
 
+  // TODO: load data from beginning instead of using button.
+
   const [data, setData] = React.useState([])
 
   const componentDidMount = () => {
@@ -37,7 +39,6 @@ const App = () => {
           console.log(response._embedded.licenses)
           setData(response._embedded.licenses)
       })
-    
   }
 
   const loadFromServer = () => {
@@ -75,8 +76,8 @@ const App = () => {
       </Container>
 
       <Container>
-        <Button onClick={componentDidMount}>Show me</Button>
-        <LicenseList licenses={data} onDelete={onDelete}/>
+        <Button onClick={componentDidMount}>Fetch Data</Button>
+        <LicenseList licenses={data} onDelete={onDelete} />
       </Container>
     </Provider>
   )
