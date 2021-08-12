@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
   mode: 'production',
   entry: [
-    './src/index.tsx'
+    '.src/ui/index.tsx'
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']

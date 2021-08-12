@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
-import { Button, Icon, Typography } from '@material-ui/core'
+import { Button, Icon, TextField, Typography } from '@material-ui/core'
 
 import { setText } from '../actions'
 import { ApplicationState } from '../reducer'
