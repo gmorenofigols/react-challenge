@@ -2,10 +2,17 @@
 
 ## Instructions ##
 
-1. For backend run:
+1. Run backend
 
-or execute src/main/java/com/SpringReactRestApp
+```
+./mvnw spring-boot:run
+```
 
-2. For frontend run:
+or execute `src/main/java/com/SpringReactRestApp.java`
 
+2. Run frontend
+
+```
 npm start
+
+```

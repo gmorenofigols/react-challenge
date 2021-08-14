@@ -28,18 +28,18 @@ if (module.hot) {
 
 const App = () => {
 
-  // TODO: load data from beginning instead of using button.
-
   const [data, setData] = React.useState([])
 
-  const componentDidMount = () => {
+  React.useEffect(() => {
+    // Fetches data from API initially. Simulates componentDidMount.
+    
     fetch('api/licenses/')
       .then(response => response.json())
       .then(response => {
           console.log(response._embedded.licenses)
           setData(response._embedded.licenses)
       })
-  }
+  }, [])
 
   const loadFromServer = () => {
     fetch('api/licenses/')
@@ -76,7 +76,6 @@ const App = () => {
       </Container>
 
       <Container>
-        <Button onClick={componentDidMount}>Fetch Data</Button>
         <LicenseList licenses={data} onDelete={onDelete} />
       </Container>
     </Provider>
